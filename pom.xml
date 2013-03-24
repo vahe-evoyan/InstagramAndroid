@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>am.itc</groupId>
+    <artifactId>auth</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>apk</packaging>
+    <name>auth</name>
+
+    <properties>
+        <platform.version>4.1.1.4</platform.version>
+        <!-- <platform.version>4.1_r2</platform.version> -->
+        <robolectric.version>2.0-alpha-2</robolectric.version>
+        <junit.version>4.8.2</junit.version>
+        <android.sdk.path>/Users/vahe_evoyan/Development/Android_SDKs/</android.sdk.path>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>${platform.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.robolectric</groupId>
+			<artifactId>robolectric</artifactId>
+            <version>${robolectric.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <androidManifestFile>${project.basedir}/AndroidManifest.xml</androidManifestFile>
+                    <assetsDirectory>${project.basedir}/assets</assetsDirectory>
+                    <resourceDirectory>${project.basedir}/res</resourceDirectory>
+                    <nativeLibrariesDirectory>${project.basedir}/src/main/native</nativeLibrariesDirectory>
+                    <sdk>
+                        <path>/Users/vahe_evoyan/Development/Android_SDKs/</path>
+                        <platform>16</platform>
+                    </sdk>
+                    <emulator>
+                        <avd>GalaxyS3</avd>
+                    </emulator>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                </configuration>
+                <extensions>true</extensions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
