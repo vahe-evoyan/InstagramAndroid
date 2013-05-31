@@ -1,5 +1,8 @@
-import am.itc.auth.MainActivity;
+package am.itc.auth.instagram;
+
+import am.itc.auth.instagram.MainActivity;
 import am.itc.auth.R;
+
 import org.robolectric.RobolectricTestRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;

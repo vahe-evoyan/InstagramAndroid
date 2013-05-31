@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="host">host</string>
+    <string name="base_path">host</string>
+    <string name="access_token_field">access_token</string>
+    <string name="authorize_url">http://api.instagram.com/oauth/access_token</string>
+    <string name="access_token_url">host</string>
+    <string name="protocol">host</string>
+    
+    <string name="client_id">DEBUG</string>
+    <string name="client_secret">DEBUG</string>
+    <string name="redirect_uri">http://evoyan.org</string>
+</resources>

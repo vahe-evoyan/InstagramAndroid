@@ -7,7 +7,7 @@
 
   <application android:icon="@drawable/icon" android:label="@string/app_name"
       		   android:allowBackup="true">
-    <activity android:name=".MainActivity">
+    <activity android:name="am.itc.auth.instagram.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
