@@ -13,7 +13,7 @@
         <!-- <platform.version>4.1_r2</platform.version> -->
         <robolectric.version>2.0-alpha-2</robolectric.version>
         <junit.version>4.8.2</junit.version>
-        <android.sdk.path>/Users/vahe_evoyan/Development/Android_SDKs</android.sdk.path>
+        <android.sdk.path>${env.ANDROID_HOME}</android.sdk.path>
     </properties>
 
     <dependencies>
@@ -49,7 +49,7 @@
                     <resourceDirectory>${project.basedir}/res</resourceDirectory>
                     <nativeLibrariesDirectory>${project.basedir}/src/main/native</nativeLibrariesDirectory>
                     <sdk>
-                        <path>/Users/vahe_evoyan/Development/Android_SDKs</path>
+                        <path>${env.ANDROID_HOME}</path>
                         <platform>16</platform>
                     </sdk>
                     <emulator>
